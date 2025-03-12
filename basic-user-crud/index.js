@@ -49,7 +49,7 @@ const RootQuery = new GraphQLObjectType({
 })
 
 const mutations = new GraphQLObjectType({
-  name: "Mutation",
+  name: "mutations",
   fields: {
     //adding user
     addUser:{
