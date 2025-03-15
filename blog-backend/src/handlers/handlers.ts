@@ -31,7 +31,7 @@ const RootQuery = new GraphQLObjectType({
     blogs: {
       type: GraphQLList(BlogType),
       async resolve() {
-        return await User.find()
+        return await Blog.find()
       },
     },
     //get all comments

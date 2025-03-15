@@ -1,7 +1,7 @@
 // import React from 'react'
 import {Box, Typography} from '@mui/material'
 import {homepageStyles} from '../../styles/homepage-styles'
-import Footer from '../../components/home/Footer'
+
 
 
 const Homepage = () => {
@@ -36,8 +36,7 @@ const Homepage = () => {
       style={homepageStyles.image} 
       src="/Articles.png" 
       alt="Articles" />
-    </Box>
-    <Footer/>
+    </Box>    
   </Box>
   )
 }

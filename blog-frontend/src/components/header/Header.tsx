@@ -3,6 +3,7 @@ import { AppBar, Toolbar,Box,Tabs, Tab, Button } from "@mui/material"
 import { ImBlogger } from "react-icons/im"
 import { IoMdLogIn } from "react-icons/io";
 import { headerStyles } from '../../styles/header-styles'
+import { Link } from 'react-router-dom'
 
 // import {headerStyles} from '../../styles/header-styles'
 
@@ -19,11 +20,16 @@ const Header = () => {
      <Box sx={headerStyles.tabContainer}>
       <Tabs textColor="inherit" sx={{"& .MuiTabs-indicator": {backgroundColor: "white",},
                                     }} value={value} onChange={(e, newValue) => setValue(newValue)}>
-        <Tab disableRipple label="Home"/>
-        <Tab label="Blogs"/>
+        {/* @ts-ignore */}
+        <Tab LinkComponent={Link} to="/" disableRipple label="Home"/>
+        {/* @ts-ignore */}
+        <Tab LinkComponent={Link} to="/blogs" label="Blogs"/>
       </Tabs>
+      {/* @ts-ignore */}
+      <Link style={{textDecoration:'none'}} to={"/auth"}>
       <Button sx={headerStyles.authBtn} endIcon={<AuthIcon size={24} style={{ background: "transparent" }} />}>AUTH
       </Button>
+      </Link>
      </Box>
       </Toolbar>
      </AppBar>
